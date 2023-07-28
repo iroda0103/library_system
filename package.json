@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node src",
-    "dev":"nodemon src"
+    "dev": "nodemon src"
   },
   "keywords": [],
   "author": "Iroda Muminova",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
