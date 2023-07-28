@@ -1,11 +1,10 @@
 const express=require('express')
+const config=require('./shared/config')
 
 const app=express()
 
 app.use(express.json())
 
-const PORT=3000
-
-app.listen(PORT,()=>{
-    console.log(`Server ${PORT}-portda ishlayapti`);
+app.listen(config.port,()=>{
+    console.log(`Server ${config.port}-portda ishlayapti`);
 })
