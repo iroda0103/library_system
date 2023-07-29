@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Admin=require('../modules/admins/Admin')
+const Borrower=require('../modules/borrowers/Borrower')
 const bcryptjs=require('bcryptjs')
 
 
@@ -58,11 +59,36 @@ module.exports = function (){
 
 // ]
 
+
+
+// const seedBorrowers=[
+//   {
+//     full_name: 'John Doe',
+//     address: '123 Main St',
+//     phone: 1234567890,
+//   },
+//   {
+//     full_name: 'Jane Smith',
+//     address: '456 Elm St',
+//     phone: 9876543210,
+//   },
+//   {
+//     full_name: 'Bob Johnson',
+//     address: '789 Oak St',
+//     phone: 5555555555,
+//   }
+
+// ]
+
 // const seedDB=async ()=>{
-//   await Admin.deleteMany({});
-//   await Admin.insertMany(seedAdmins)
+//     await Admin.deleteMany({});
+//     await Borrower.deleteMany({});
+//     await Admin.insertMany(seedAdmins)
+//   await Borrower.insertMany(seedBorrowers)
 // }
 
 // seedDB().then(()=>{
 //   mongoose.connection.close();
 // })
+
+
