@@ -36,6 +36,7 @@ const postAdmin = async (req, res, next) => {
  */
 const getAdmins = async (req, res, next) => {
   try {
+    console.log(req.query);
     httpValidator({query:req.query},getAdminSchema)
     const result = await listAdmin(req.query);
 

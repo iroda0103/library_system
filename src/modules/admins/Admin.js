@@ -26,10 +26,10 @@ const adminSchema = new mongoose.Schema(
   },
   {
     versionKey: false,
-    timestamps:false,
+    timestamps: false,
   }
 );
 
-const Admin=mongoose.model('Admin',adminSchema)
+const Admin = mongoose.model("Admin", adminSchema);
 
-module.exports=Admin
+module.exports = Admin;

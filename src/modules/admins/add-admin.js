@@ -1,17 +1,17 @@
-const Admin=require('./Admin')
-const bcryptjs=require('bcryptjs')
+const Admin = require("./Admin");
+const bcryptjs = require("bcryptjs");
 
-const addAdmin=async(data)=>{
-    const hashedPassword = await bcryptjs.hash(data.password, 10);
+const addAdmin = async (data) => {
+  const hashedPassword = await bcryptjs.hash(data.password, 10);
 
-    const result = await Admin.create({
-      ...data,
-      password: hashedPassword,
-    });
+  const result = await Admin.create({
+    ...data,
+    password: hashedPassword,
+  });
 
-    const { password, is_deleted, ...rest } = result.toObject();
+  const { password, is_deleted, ...rest } = result.toObject();
 
-    return rest;
-}
+  return rest;
+};
 
-module.exports=addAdmin
+module.exports = addAdmin;
