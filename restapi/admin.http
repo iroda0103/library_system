@@ -1,0 +1,50 @@
+###GET http://localhost:3000/admins?sort[by]=full_name&sort[order]=asc
+GET http://localhost:3000/admins?filters[is_deleted]=false&filters[is_super]=false&sort[by]=full_name&sort[order]=asc
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNGIwNWZkZTIzNWYzODZlYjVjMDQwIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYxNDgyNSwiZXhwIjoxNjkwNzAxMjI1fQ.9kP55SXY1ZKt3bWpVZoIsz4F2tm8C1X3e4I1xZa7tuY
+
+###
+POST http://localhost:3000/admins
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNGIwNWZkZTIzNWYzODZlYjVjMDQwIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYxNDgyNSwiZXhwIjoxNjkwNzAxMjI1fQ.9kP55SXY1ZKt3bWpVZoIsz4F2tm8C1X3e4I1xZa7tuY
+Content-Type: application/json
+
+{
+    "full_name":"Iroda Muminova",
+    "username":"farangiz0117",
+    "password":"1234"
+}
+
+###Adminlar login qila olish uchun yo'l#############
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username":"nurbek3242",
+    "password":"1234"
+}
+
+###
+###Bitta adminni olish uchun yo'l###########################
+GET  http://localhost:3000/admins/64c54e229c9e96743d08b4d7
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNGIwNWZkZTIzNWYzODZlYjVjMDQwIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYxNDgyNSwiZXhwIjoxNjkwNzAxMjI1fQ.9kP55SXY1ZKt3bWpVZoIsz4F2tm8C1X3e4I1xZa7tuY
+
+###Adminni tahrirlash uchun yo'l#############################
+PATCH  http://localhost:3000/admins/64c4bc7ebbdda1e90482ff03
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNGIwNWZkZTIzNWYzODZlYjVjMDQwIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYzMjE4OCwiZXhwIjoxNjkwNzE4NTg4fQ.JF2k716w5LYzimXCRIwWwThw83C_dc7YnUt-U955mxo
+Content-Type: application/json
+
+{
+    "full_name":"Farangiz Ismatova"
+}
+
+###Admin o'zini tahrirlash uchun yo'l##########################
+PATCH  http://localhost:3000/admins/me
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNGIwNWZkZTIzNWYzODZlYjVjMDQwIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYxNDgyNSwiZXhwIjoxNjkwNzAxMjI1fQ.9kP55SXY1ZKt3bWpVZoIsz4F2tm8C1X3e4I1xZa7tuY
+Content-Type: application/json
+
+{
+    "full_name":"Farangiz"
+}
+
+###Admin o'zini tahrirlash uchun yo'l#############################
+DELETE   http://localhost:3000/admins/64c4b52b7996dd76ad8b5146
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNGIwNWZkZTIzNWYzODZlYjVjMDQxIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MDYzMjQ5NywiZXhwIjoxNjkwNzE4ODk3fQ.6MSNJlDBf8jxIV8GawAyTpoCQCLfds2QOBvxrG2Lkmg

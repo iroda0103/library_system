@@ -1,0 +1,33 @@
+###Borrowerlarni olish uchun yo'l ################
+GET http://localhost:3000/borrowers?filters[is_deleted]=false&sort[by]=full_name&sort[order]=desc
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNGIwNWZkZTIzNWYzODZlYjVjMDQwIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYxNDgyNSwiZXhwIjoxNjkwNzAxMjI1fQ.9kP55SXY1ZKt3bWpVZoIsz4F2tm8C1X3e4I1xZa7tuY
+
+###Borrower qo'shish############################
+POST http://localhost:3000/borrowers
+Content-Type: application/json
+
+{
+    "full_name":"Iroda Muminova",
+    "address":"123 Main St",
+    "phone":881111114
+}
+
+
+###
+###Bitta borrowerni olish uchun yo'l###########################
+GET  http://localhost:3000/borrowers/64c55021a0845f9b2b5ceefe
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNGIwNWZkZTIzNWYzODZlYjVjMDQwIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYxNDgyNSwiZXhwIjoxNjkwNzAxMjI1fQ.9kP55SXY1ZKt3bWpVZoIsz4F2tm8C1X3e4I1xZa7tuY
+
+
+###Borrowerni tahrirlash uchun yo'l#############################
+PATCH  http://localhost:3000/borrowers/64c55021a0845f9b2b5ceefe
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNGIwNWZkZTIzNWYzODZlYjVjMDQwIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYzMjE4OCwiZXhwIjoxNjkwNzE4NTg4fQ.JF2k716w5LYzimXCRIwWwThw83C_dc7YnUt-U955mxo
+Content-Type: application/json
+
+{
+    "full_name":"Farangiz Ismatova"
+}
+
+###Borrowerni o'chirish uchun yo'l#############################
+DELETE   http://localhost:3000/borrowers/64c55021a0845f9b2b5ceefe
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNGIwNWZkZTIzNWYzODZlYjVjMDQwIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYzMjE4OCwiZXhwIjoxNjkwNzE4NTg4fQ.JF2k716w5LYzimXCRIwWwThw83C_dc7YnUt-U955mxo

@@ -1,0 +1,31 @@
+###Authorlarni olish uchun yo'l ################
+GET http://localhost:3000/authors?filters[is_deleted]=false&sort[by]=name&sort[order]=desc
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNGIwNWZkZTIzNWYzODZlYjVjMDQwIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYxNDgyNSwiZXhwIjoxNjkwNzAxMjI1fQ.9kP55SXY1ZKt3bWpVZoIsz4F2tm8C1X3e4I1xZa7tuY
+
+###Author qo'shish############################
+POST http://localhost:3000/authors
+Content-Type: application/json
+
+{
+    "name":"Iroda Muminova"
+}
+
+
+###
+###Bitta Authorni olish uchun yo'l###########################
+GET  http://localhost:3000/authors/64c5aaf6b23f04c82b7668ae
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNGIwNWZkZTIzNWYzODZlYjVjMDQwIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYxNDgyNSwiZXhwIjoxNjkwNzAxMjI1fQ.9kP55SXY1ZKt3bWpVZoIsz4F2tm8C1X3e4I1xZa7tuY
+
+
+###Authorni tahrirlash uchun yo'l#############################
+PATCH  http://localhost:3000/authors/64c5abb1283c796ea1f4b313
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNGIwNWZkZTIzNWYzODZlYjVjMDQwIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYzMjE4OCwiZXhwIjoxNjkwNzE4NTg4fQ.JF2k716w5LYzimXCRIwWwThw83C_dc7YnUt-U955mxo
+Content-Type: application/json
+
+{
+    "name":"Farangiz Ismatova"
+}
+
+###Authorni o'chirish uchun yo'l#############################
+DELETE   http://localhost:3000/authors/64c5abb1283c796ea1f4b313
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNGIwNWZkZTIzNWYzODZlYjVjMDQwIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYzMjE4OCwiZXhwIjoxNjkwNzE4NTg4fQ.JF2k716w5LYzimXCRIwWwThw83C_dc7YnUt-U955mxo

@@ -1,0 +1,26 @@
+###Loanlarni olish uchun yo'l ################
+GET http://localhost:3000/loans?sort[by]=out_date&sort[order]=desc&filters[admin]=64c60b7c38b9a5d6bbcffd69
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNGIwNWZkZTIzNWYzODZlYjVjMDQwIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYxNDgyNSwiZXhwIjoxNjkwNzAxMjI1fQ.9kP55SXY1ZKt3bWpVZoIsz4F2tm8C1X3e4I1xZa7tuY
+
+###Loan qo'shish############################
+POST http://localhost:3000/loans
+Content-Type: application/json
+
+{
+    "book":"64c62a41ff45c49fb7ed1c0f",
+    "borrower":"64c60b7c38b9a5d6bbcffd71",
+    "admin":"64c60b7c38b9a5d6bbcffd69",
+    "due_date":"8-3-2023"
+
+}
+
+
+###
+###Bitta Loanni olish uchun yo'l###########################
+GET  http://localhost:3000/loans/64c63187dcbb2dc8bfe1954a
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNGIwNWZkZTIzNWYzODZlYjVjMDQwIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYxNDgyNSwiZXhwIjoxNjkwNzAxMjI1fQ.9kP55SXY1ZKt3bWpVZoIsz4F2tm8C1X3e4I1xZa7tuY
+
+
+###Kitobni qaytarish uchun yo'l#############################
+PATCH  http://localhost:3000/loans/64c63187dcbb2dc8bfe1954a
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjNGIwNWZkZTIzNWYzODZlYjVjMDQwIiwicm9sZSI6InN1cGVyX2FkbWluIn0sImlhdCI6MTY5MDYzMjE4OCwiZXhwIjoxNjkwNzE4NTg4fQ.JF2k716w5LYzimXCRIwWwThw83C_dc7YnUt-U955mxo
