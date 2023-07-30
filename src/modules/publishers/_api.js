@@ -10,8 +10,8 @@ const {
 
 const router = express.Router();
 
-router.post("/publishers", postPublisher);
-router.get("/publishers", isLoggedIn, getPublishers);
+router.post("/publishers",isLoggedIn, postPublisher);
+router.get("/publishers", getPublishers);
 router.get("/publishers/:id", isLoggedIn, getPublisher);
 router.patch("/publishers/:id", isLoggedIn, patchPublisher);
 router.delete("/publishers/:id", isLoggedIn, deletePublisher);
