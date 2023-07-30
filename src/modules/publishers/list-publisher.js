@@ -9,7 +9,7 @@ const listPublisher = async (query = {}) => {
   const sorted = {};
 
   if (q) {
-    filter[`$or`] = [{ full_name: { $regex: new RegExp(q, "i") } }];
+    filter[`$or`] = [{ name: { $regex: new RegExp(q, "i") } }];
   }
 
   if (sort) {

@@ -20,7 +20,7 @@ exports.getPublisherSchema = {
       }),
     }),
     sort: Joi.object({
-      by: Joi.string().valid("full_name", "phone"),
+      by: Joi.string().valid("name"),
       order: Joi.string().valid("asc", "desc"),
     }),
     filters: Joi.object({
