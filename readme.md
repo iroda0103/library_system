@@ -3,7 +3,9 @@
 ## Tizimning funksional qo'shimchalari:
 
 -Loan post bo'layotganida bookning nusxalarini tekshirish 
+
 -Bookda number_of_leased ya'ni ushbu kitob nechta kishiga berilganligini aniqlab turadi default nolga teng
+
 -Loanda returned_date ya'ni ushbu kitobning qaytgan vaqtini aniqlaydi default null teng
 
 
