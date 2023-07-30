@@ -46,20 +46,29 @@ PATCH /loads/:id
 ## seedlarni qo'shish uchun
 
 const seedDB = async () => {
+
   await Admin.insertMany(seedAdmins);
+
   await Borrower.insertMany(seedBorrowers);
+
   await Publisher.insertMany(seedPublishers);
+
   await Author.insertMany(seedAuthors);
+
   // await Book.insertMany(seedBooks);//kerakli idlar bilan bookseedini tahrirlang
+  
 
 };
 
 seedDB().then(() => {
   mongoose.connection.close();
 });
+
 ni 
 sr/db/index.js filening oxiriga etib qo'yish kk .Keyin olib tashlash kk .
 
 keyin Book uchun seed alohida 'await Book.insertMany(seedBooks)(kerakli idlar bilan bookseedini tahrirlang)' yuqoridagi usulda qo'shish kk.
+
 Keyin yana olibtashlash kk.Yoki book un seed kerak emas.
+
 Seedlarni ishlata olganim shu boshqa yo'lda qila olmadim.!
